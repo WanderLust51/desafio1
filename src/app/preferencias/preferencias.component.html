@@ -1,0 +1,19 @@
+<div class="center margin-y">
+
+    <a href="javascript:void(0)" class="padding-y" (click)="addPreference()">Agregar Referencia +</a>
+    <a href="javascript:void(0)" class="padding-y" (click)="popPreference()">Quitar una preferencia</a>
+
+    <form action="" [formGroup]="preferenceGroup">
+        <ng-container formArrayName="preferences">
+            
+            <div class="row" *ngFor="let e of preferenceForm.controls; let i = index">
+                <label for="preference-{{i}}"><span class="chip">{{i+1}}</span> Preferencia</label>
+                <input type="text" id="preference-{{i}}" [formControlName]="i">
+            </div>
+            
+        </ng-container>
+    </form>
+
+    <a href="javascript:void(0)" class="padding-y" (click)="mostrar()">Mostrar</a>
+
+</div>

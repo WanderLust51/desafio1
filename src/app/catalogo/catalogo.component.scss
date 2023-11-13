@@ -1,0 +1,81 @@
+main{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    // background-color: aliceblue;
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.car{
+    justify-content: start;
+}
+.divide{
+    width: 50%;
+    margin: 1cm auto;
+    border-bottom: solid 1px black;
+
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.margin-y{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.padding-y{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.card{
+    $width: 6cm;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+    position: relative;
+    padding: 8px 0 1rem 0;
+    margin: 10px 6px;
+    width: $width;
+
+    background-color: white;
+    border: solid 1px lightgray;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.164);
+
+    & > img{
+        width: $width * 0.95;       
+        aspect-ratio: 1/1;
+        margin: 0 auto;
+    }
+    & > h3{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 5px;
+    }
+    & > p{
+        margin-top: 5px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-bottom: 1.2rem;
+    }
+    & > button{
+        position: absolute;
+        bottom: 12px;
+        left: 1rem;
+        font-size: 0.82rem;
+        padding: 2px 1rem;
+        border: solid 1px lightgray;
+        border-radius: 1rem;
+    }
+    &:active{
+
+        & > button{
+            background-color: rgb(226, 226, 226);
+        }
+    }
+}

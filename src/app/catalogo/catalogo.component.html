@@ -1,0 +1,36 @@
+<div class="divide"></div>
+
+<span class="center margin-y">
+    <h1>Mi humilde tienda</h1>
+
+    <!-- <a href="javascript:void(0)" class="padding-y"
+    [textContent]="carVisible? 'Ocultar carrito' : 'Mostrar carrito'"
+    (click)="carVisible? carVisible = false : carVisible = true"></a> -->
+
+</span>
+
+<!-- <main class="car" *ngIf="carVisible">
+    <div class="card" *ngFor="let e of carrito; let i = index">
+        <p>{{ e.amount }}</p>
+        <img [src]="e.imagen" alt="">
+        <h3>{{ e.titulo }}</h3>
+        <p>$ {{ e.precio }}</p>
+        <button (click)="popArticle(i)">Eliminar</button>
+    </div>
+</main> -->
+
+<!-- <h2 class="center" *ngIf="carVisible">Total: ${{ total }}</h2> -->
+<!-- <div class="divide" *ngIf="carVisible"></div> -->
+
+<app-carrito [articulos]="articulos" [carrito]="carrito" [total]="total" [articleAmount]="articleAmount" (artAmount)="articleAmount"></app-carrito>
+
+<main>
+
+    <div class="card" *ngFor="let e of articulos; let i = index">
+        <img [src]="e.imagen" alt="">
+        <h3>{{ e.titulo }}</h3>
+        <p>$ {{ e.precio }}</p>
+        <button (click)="addArticle(i)">Añadir</button>
+    </div>
+
+</main>

@@ -1,0 +1,39 @@
+form{
+    margin: 1.25rem 0;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.margin-y{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.padding-y{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.row{
+    height: 1.75rem;
+    margin: 1rem 0;
+    & > *{
+        height: 100%;
+    }
+    & > label{
+        margin-right: 1rem;
+        & > .chip{
+            background-color: rgb(173, 173, 173);
+            color: white;
+            margin-right: 5px;
+            padding: 3px 8px;
+            border-radius: 5px;
+
+        }
+    }
+    & > input{
+        padding: 0 12px;
+        border-radius: 1rem;
+        border: solid 1px lightgray;
+    }
+}

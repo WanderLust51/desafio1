@@ -1,0 +1,21 @@
+<span class="center margin-y">
+    <a href="javascript:void(0)" class="padding-y"
+    [textContent]="carVisible? 'Ocultar carrito' : 'Mostrar carrito (' + articleAmount + ')'"
+    (click)="carVisible? carVisible = false : carVisible = true"></a>
+</span>
+
+<main class="car" *ngIf="carVisible">
+
+    <p class="center" *ngIf="carrito.length <= 0">Añade algo!</p>
+
+    <div class="card" *ngFor="let e of carrito; let i = index">
+        <p>Cantidad: {{ e.amount }}</p>
+        <img [src]="e.imagen" alt="">
+        <h3>{{ e.titulo }}</h3>
+        <p>$ {{ e.precio }}</p>
+        <button (click)="popArticle(i)">Eliminar</button>
+    </div>
+</main>
+
+<h2 class="center" *ngIf="carVisible">Total: ${{ total }}</h2>
+<div class="divide" *ngIf="carVisible"></div>
